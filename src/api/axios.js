@@ -1,7 +1,7 @@
 import axios from "axios"
 
 const api = axios.create({
-    baseURL: "https://task-manager-be-wyfi.onrender.comapi"
+    baseURL: "https://task-manager-be-wyfi.onrender.com"
 })
 
 api.interceptors.request.use((config) => {

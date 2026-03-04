@@ -48,8 +48,6 @@ const Home = () => {
 
           
           setStatslist(stats.data)
-          console.log(stats.data);
-          console.log(res.data)
           setTasklist(res.data)
         } catch (err) {
           alert(err.response?.data?.message || "Error fetching tasks");
