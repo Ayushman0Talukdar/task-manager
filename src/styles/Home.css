@@ -1,0 +1,436 @@
+.btn{
+    background: #253237;
+    color: #f4f1e6;
+    aspect-ratio: 1;
+    border-radius: 8px;
+    height: 60px;
+    font-family: "poppins", sans-serif;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    border: none;
+}
+
+.NavLink{
+    text-decoration: none;
+    color: #0466c8;
+}
+
+
+.overdue{
+    color: rgb(167, 38, 38);
+    background-color: #e639470c;
+    transition: 0.2s;
+}
+
+.overdue:hover{
+    transition: 0.2s;
+    background-color: #e6394713;
+}
+
+.formTasks{
+    border-radius: 30px;
+    background-color: #161a1d;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.137);
+    margin: 40px;
+    margin-top: 0;
+    margin-right: 10px;
+    margin-left: 10px;
+    color: #f4f1e6;
+    height: calc(100% - 100px);
+    width: 100%;
+}
+
+.formTasks > input{
+    /* padding: 5px; */
+    border: none;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    outline: none;
+    padding: 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: #2c343a;
+    color: #f4f1e6;
+}
+
+.formTasks > .textarea > input:first-child{
+    border: none;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    outline: none;
+    padding: 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: #2c343a;
+    border-radius: 10px 10px 0px 0px;
+    color: #f4f1e6;
+}
+
+.formTasks > .textarea > input:last-child{
+    border: none;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    outline: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 0;
+    padding-bottom: 30px;
+    border-radius: 10px;
+    border: none;
+    background-color: #2c343a;
+    border-radius: 0px 0px 10px 10px;
+    color: #f4f1e6;
+}
+
+.textarea{
+    display: flex;
+    flex-direction: column;
+    /* gap: 10px; */
+}
+
+.inputCard{
+    display: flex;
+    align-items: end;
+    flex: 3;
+    height: 100%;
+}
+
+
+.radiobtn .red{
+    background-color: #e63946;
+}
+.radiobtn .orange{
+    background-color: #f18701;
+}
+.radiobtn .green{
+    background-color: #195e10;
+}
+.radiobtn{
+    display: flex;
+    justify-content: space-between;
+
+}
+.radiobtn button {
+    width: 100%;
+    height: 60px;
+    margin: 5px;
+    border: none;
+    background: #161616;
+    cursor: pointer;
+    border-radius: 4px;
+    color: #f4f1e6;
+    font-size: 16px;
+    border: #53535334 1px solid;
+}
+
+/* Style for the button that matches the state */
+.radiobtn button.active {
+    /* background-color: #ffffff; */
+    color: white;
+    /* border-color: #912108; */
+    /* font-weight: bold; */
+}
+
+.btnInput{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #161616;
+    padding: 10px;
+    color: #f4f1e6;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+
+.btnInput:hover{
+    background-color: #116632;
+    transition: 0.3s;
+}
+
+.inputTitle{
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #535353;
+    margin-bottom: 20px;
+}
+
+.taskContainer{
+    color: white;
+    display: flex;
+    background-color: #161a1d;
+    padding-left: 20px;
+    margin-left: 20px;
+    border-bottom: #53535336 1px solid;
+}
+
+.row{
+    flex: 2;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 40px;
+}
+
+.rowL{
+    flex: 2;
+    padding: 40px;
+
+}
+
+.tasks{
+    border-radius: 30px;
+    flex: 7;
+    height: calc(100% - 100px);
+    background-color: #161a1d;
+    overflow-y: scroll;
+    margin-bottom: 40px;
+    padding: 30px;
+    align-self: flex-end;
+}
+
+.Label{
+    color: rgb(133, 133, 133);
+    display: flex;
+    background-color: #161a1d;
+    padding: 20px;
+    margin-left: 20px;
+}
+
+.desc{
+    max-width: 195;
+}
+
+.activeTask{
+    
+}
+
+.editsBtn{
+    display: flex;
+}
+
+.done{
+   color: #535353;
+}
+
+.ceditsBtn{
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.ceditsBtn:disabled:hover{
+    background-color: #e639473b;
+    color: #2c343a;
+}
+
+.ceditsBtn:hover{
+    background-color: #22c55e;
+    color: white;
+}
+.deditsBtn{
+    padding: 3px;
+    border-radius: 10px;
+    border: none;
+    transition: 0.3s;
+    cursor: pointer;
+
+}
+
+.deditsBtn:hover{
+    background-color: #e63946;
+    color: #fff;
+    transition: 0.3s;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+.notasks{
+    color: rgba(255, 255, 255, 0.13);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.stats{
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: whitesmoke;
+    padding: 30px;
+    margin-left: 10px;
+    flex-direction: row;
+    background-color: #161a1d ;
+    border-radius: 30px;
+    padding-bottom: 0;
+}
+
+.Details{
+    display: flex;
+    flex: 2;
+}
+
+
+.pieChart{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+    height: 100%;
+}
+
+
+
+.barChart{
+   z-index: 0;
+}
+
+
+.completionPercent{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    font-size: 20px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.completionPercent > div{
+    color: #a1a1a1;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.cards{
+    display: grid;
+    flex: 3;
+    height: 100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.cards .card{
+    background-color: #0f1016;
+    /* height: 60%; */
+    /* aspect-ratio: 2; */
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-around;
+    font-family: "Bebas Neue", sans-serif;
+
+}
+
+.cards .card .cardTitle{
+    font-size:  25px;
+    /* margin: 30px; */
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+}
+
+
+
+.cards .card > div{
+    font-size:  25px;
+    /* margin: 30px; */
+    display: flex;
+
+    align-items: center;
+
+}
+
+.icons{
+    background-color: #181818;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.card:nth-child(1){
+    background: linear-gradient( #1d1d1d, #363636)
+}
+
+.card:nth-child(4){
+    background: linear-gradient( #195e10, #228a0d)
+}
+
+
+.card:nth-child(2){
+    background: linear-gradient( #8b1c0d, #c53522)
+}
+
+
+.card:nth-child(3){
+    background: linear-gradient( #8b4a0d, #c58422)
+}
+
+
+.leftSec{
+    height: 100%;
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    /* gap: 10px; */
+}
+
+
+
+.filter{
+    margin: 10px;
+    gap: 10px;
+    background-color: #161a1d;
+    padding: 10px;
+    border: #53535334 1px solid;
+    border-radius: 100px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.filterBtnHolder > .activeFilterBtn {
+    background-color: #3b3b3b;
+}
+
+
+.filterBtnHolder > button{
+    background-color: #272727;
+    outline: none;
+    padding: 10px 20px 10px 20px;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filter > button:hover{
+    background-color: #116632;
+    transition: 0.3s;
+
+}
+
+.hide{
+    display: none;
+}
+

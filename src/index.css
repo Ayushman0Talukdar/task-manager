@@ -1,13 +1,366 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+    box-sizing: none;
+    margin: 0;
+    padding: 0;
+    --gray-color: #1b2021;
+    overflow-y: scroll;
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.Title{
+    
+}
+
+.roboto {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+  }
+  
+.bodoni-moda {
+    font-family: "Bodoni Moda", serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    color: white;
+  }
+
+.bebas-neue-regular {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+  
+
+.App{
+    
+    /* overflow-y: hidden; */
+    max-height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
+
+.Sidebar{
+    left: calc(-20% - 40px);
+    padding: 20px;
+    position: absolute;
+    background: linear-gradient(to right, #0b090a3b, #1411132a);
+    backdrop-filter: blur(8px);
+    width: 20%;
+    height: 100vh;
+    transition: 0.3s;
+   z-index: 1;
+
+}
+
+
+.Login{
+    background-color: #0b090a;
+    
+    width: 100%;
+    height: 100vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginForm{
+    z-index: 1;
+
+    background-color: #161a1d;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.loginForm > input{
+    padding: 10px;
+    width: 300px;
+    border-radius: 10px;
+    /* transition: 0.2s; */
+    outline: none;
+    border: none;
+}
+
+
+.loginSbmbtn{
+    background-color: #0466c8;
+    color: white;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+}
+
+.loginForm > input:focus{
+    outline: none;
+    border: none;
+    padding: 10px;
+    width: 300px;
+    outline-offset: 0;
+}
+
+.sbmbtn{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* .sbmbtn > div > span > NavLink{
+    
+} */
+.sbmbtn > button{
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+
+
+
+.Home{
+    flex-direction: column;
+    display: flex;
+    height: 100vh;
+    padding: 20px;
+    width: 100%;
+    background:  #0b090a;
+    gap: 10px;
+}
+
+
+
+.switcher{
+    position: absolute;
+    aspect-ratio: 1;
+    top: 10px;
+    z-index: 1;
+    left: 20px;
+}
+
+.btn{
+    position: absolute;
+    aspect-ratio: 1;
+    top: 10px;
+    z-index: 1;
+    right: 10px;
+    background: #343a40;
+    color: #fff;
+    aspect-ratio: 1;
+    border-radius: 16px;
+    height: 60px;
+    font-family: "poppins", sans-serif;
+    font-weight: 600;
+    border: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    outline: 10px #0b090a solid;
+
+}
+
+@media (min-width: 375px) {
+
+
+  }
+
+  
+
+/* Laptop */
+@media (max-width: 1024px) {
+    
+ }
+
+/* Desktop */
+@media (max-width: 1280px) { 
+    .inputCard{
+        flex: 2;
+    }
+    .tasks{
+        flex: 2;
+    }
+    .rowL{
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .row{
+        padding: 10px 0px 10px 0px;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+        
+    }
+    .ceditsBtn {
+        border-radius: 10px 0px 0px 10px;
+        border-right: 1px #00000009 solid;
+    }
+    .deditsBtn {
+        border-radius: 0px 10px 10px 0px;
+        border: 1px #fff solid;
+    }
+    .taskContainer{
+        margin: 0;
+        padding: 0;
+
+    }
+    .tasks{
+        height:100%;
+        /* padding: ; */
+        margin: 0px 10px 00px 10px;
+        padding: 0px 10px 0px 10px;
+        width: 100%;
+    }
+    .edit-btns{
+        flex: 3;
+    }
+
+    .Details{
+        justify-content: space-between;
+    
+    }
+    .priority{
+        display: none;
+    }
+    .cards{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 0px 40px 0px 40px;
+    }
+    body{
+        overflow-y: hidden;
+    }
+}
+
+
+/* Tablet */
+@media (max-width: 767px) { 
+    .stats{
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+    .Details{
+        flex:1;
+    }
+    .Home{
+        overflow-y: scroll;
+        height: 100%;
+    }
+    .cards{
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 0px 40px 0px 40px;
+    }
+    .cards .card .cardTitle{
+        font-size:  16px;
+        /* margin: 30px; */
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    
+    }
+    .ProgressBar{
+        margin-bottom: 40px;
+    }
+    .filter{
+    display: flex;
+    flex-direction: column;
+    border: none;
+    }
+    .inputCard{
+        width: 100%;
+
+    }
+
+    .filterBtnHolder{
+        display: flex;
+        gap: 10px;
+    }
+    .cards .card > div{
+        font-size:  16px;
+        /* margin: 30px; */
+        display: flex;
+    
+        align-items: center;
+    
+    }
+    .Details{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .rowL{
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .row{
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+        
+    }
+    .ceditsBtn {
+        border-radius: 10px 0px 0px 10px;
+        border-right: 1px #00000009 solid;
+    }
+    .deditsBtn {
+        border-radius: 0px 10px 10px 0px;
+        border: 1px #fff solid;
+    }
+    .taskContainer{
+        margin: 0;
+        padding: 0;
+
+    }
+    .tasks{
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+    .edit-btns{
+        flex: 3;
+    }
+
+    .tasks > div{
+        margin: 0;
+        padding: 10px;
+        margin: 0px 10px 0px 0px;
+    }
+    .priority{
+        display: none;
+    }
+
+}
+
+/* Large screens */
+@media (max-width: 1440px) { 
+
+
+}
+
+.lowPri{
+    background-color: #13e60010;
+}
+.midPri{
+    background-color: #ff7b0011;
+}
+.highPri{
+    background-color: #ff080013;
 }

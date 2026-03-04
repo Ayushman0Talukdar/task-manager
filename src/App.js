@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import {Route,Routes} from "react-router-dom"
+import Login from "./pages/login.js"
+import Register from "./pages/register.js";
+import Home from "./pages/home.js"
+import { Sidebar } from "./components/sidebar.js";
+import { useState } from "react";
+import { IcBaselineViewSidebar } from "./icons/sidebaricon.js";
 
 function App() {
+  const [bar, setBar] = useState(false)
+
+  const handleSwitch = () => {
+    setBar(prev => !prev); // toggle true/false
+  };
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Sidebar bar={bar} />
+        <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/login' element={<Login/>}/>
+        <Route path='/register' element={<Register/>}/>
+      </Routes>
+        <button className="switcher btn" onClick={handleSwitch}><IcBaselineViewSidebar /></button>
     </div>
+     
   );
 }
 
