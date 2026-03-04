@@ -32,14 +32,14 @@ const Home = () => {
         try {
           const token = localStorage.getItem("token"); // or wherever you store it
     
-          const res = await api.get("/tasks", {
+          const res = await api.get("api/tasks", {
             headers: {
               Authorization: `Bearer ${token}`,
               "Content-Type": "application/json",
             },
           });
 
-          const stats = await api.get("/tasks/stats", {
+          const stats = await api.get("api/tasks/stats", {
               headers: {
                 Authorization: `Bearer ${token}`,
                 "Content-Type": "application/json",
@@ -69,7 +69,7 @@ const Home = () => {
         e.preventDefault();
 
         try {
-            const res = await api.post("/tasks", {
+            const res = await api.post("api/tasks", {
                 title,
                 description,
                 status,
@@ -88,7 +88,7 @@ const Home = () => {
 
       const handleComplete = async (id) => {
         try {
-          const res = await api.put(`/tasks/${id}`, {
+          const res = await api.put(`api/tasks/${id}`, {
             status: "done",
           });
       
@@ -106,7 +106,7 @@ const Home = () => {
 
       const handleDelete = async (id) => {
         try {
-          const res = await api.delete(`/tasks/${id}`);
+          const res = await api.delete(`api/tasks/${id}`);
       
           // Update local state
           setTasklist((prevTasks) =>

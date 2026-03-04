@@ -28,7 +28,7 @@ const Login = () => {
     const handleSumit = async (e) => {
         e.preventDefault()
         try {
-            const res = await api.post("/auth/login", { email, password })
+            const res = await api.post("api/auth/login", { email, password })
             const receivedToken = res.data.token // Grab it directly
             
             setToken(receivedToken)
@@ -36,7 +36,7 @@ const Login = () => {
             
             navigate("/") 
         } catch(err){
-            alert(err.response?.data?.message || "Error")
+            console.log(err.response?.data?.message || "Error")
         }
     }
     

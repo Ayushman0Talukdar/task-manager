@@ -11,7 +11,7 @@ const Register = () => {
         console.log("submitting")
         e.preventDefault()
         try {
-            await api.post("/auth/register", { email, password })
+            await api.post("api/auth/register", { email, password })
             alert("registered successfully")
         } catch(err){
             alert(err.response?.data?.message || "Error")
